@@ -1,0 +1,26 @@
+public:
+    long long NthRoot(long n, long m) {
+        if (m < 1) return -1; 
+        long long low = 0, high = m; 
+        long long ans = -1; 
+
+        while (low <= high) {
+            long long mid = low + (high - low) / 2;
+            long long val = pow(mid, n);
+            
+          
+            if (val > m || val < 0) { 
+                high = mid - 1;
+            } else if (val < m) {
+                ans = mid; 
+                low = mid + 1; 
+            } else { // val == m
+                return mid; 
+            }
+        }
+        if(pow(ans,n)==m){
+            return ans;
+        }
+        
+        return -1;
+    }

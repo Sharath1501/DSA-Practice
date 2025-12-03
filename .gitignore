@@ -1,0 +1,20 @@
+# Python
+env/
+__pycache__/
+*.py[cod]
+
+# C++
+*.exe
+*.o
+
+# Java
+*.class
+
+# Media/Output
+output_frames/
+*.mp4
+*.png
+*.jpg
+
+# Models (optional, but good to ignore large files if not needed, keeping yolov8s.pt for now as it's <100MB)
+# *.pt
